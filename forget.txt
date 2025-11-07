@@ -40,5 +40,11 @@
 40.curb
 41.decent 
 42.trial
-
-top to 577
+top to 577==========
+43.awkward
+44.conventional
+45.devote
+46.thrive
+47.marital
+48.discriminate
+====627=====
