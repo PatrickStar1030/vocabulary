@@ -1,50 +1,274 @@
-1.nursery
-2.outset
-3.perceive
-4.plug
-5.plumber
-6.quotation
-7.rail
-8.refrain
-9.relay
-10.inherent
-11.rival
-12.rip
-13.resume
-14.sanction
-15.scarce/sacred/scare
-16.sew
-17.spite
-18.staple
-19.stockpile
-20.stripe
-21.surge
-22.impoverished
-23.proverb
-24.dismiss
-25.penalty
-26.immersive
-27.indulge/indulgence
-28.indispensable
-29.roughly
-30.feather
-31.flock
-32.headquarters
-33.subsidy
-34.widespread
-35.desperate
-36.apparent
-37.landscape
-38.dreary
-39.pupil
-40.curb
-41.decent 
-42.trial
-top to 577==========
-43.awkward
-44.conventional
-45.devote
-46.thrive
-47.marital
-48.discriminate
-====627=====
+========== 【情感/心理类】Emotions & Psychology ==========
+1.nursery [n.托儿所] 词根:nurse(护理)+-ery(场所) | 记忆:护士(nurse)工作的地方→托儿所
+2.perceive [v.察觉,感知;理解] 词根:per-(完全)+ceive(拿取) | 记忆:完全拿取信息→感知 | 相关:receive, deceive, conceive
+3.impoverished [a.贫困的] 词根:im-(进入)+pover(贫穷)+-ish(使...)+-ed | 记忆:使进入贫穷状态 | 相关:poverty(贫穷)
+4.desperate [a.绝望的,不顾一切的] 词根:de-(去掉)+sper(希望)+-ate | 记忆:去掉希望→绝望 | 相关:despair(绝望)
+5.apparent [a.明显的,表面的] 词根:ap-(朝向)+par(出现)+-ent | 记忆:朝向出现→明显可见 | 相关:appear(出现), transparent(透明的)
+6.dreary [a.沉闷的,阴郁的] 记忆:联想dread(恐惧)+weary(疲倦)→沉闷的
+7.awkward [a.笨拙的,尴尬的] 记忆:awk(反方向)+ward(方向)→方向反了→笨拙
+8.reluctant [a.不情愿的] 词根:re-(反对)+luct(斗争)+-ant | 记忆:内心斗争→不情愿 | 相关:reluctance(不情愿)
+9.frustration [n.挫折,沮丧] 词根:frustr(徒劳)+-ation | 记忆:徒劳的感觉→挫折 | 相关:frustrate(使沮丧)
+10.earnest [a.认真的,诚挚的] 记忆:earn(赚取)+est→最认真才能赚到
+11.cheerful [a.愉快的] 词根:cheer(欢呼)+-ful(充满) | 记忆:充满欢呼→愉快的
+12.grieve [v.使悲伤] 词根:griev(重,悲伤) | 记忆:使心情沉重→悲伤 | 相关:grief(悲伤), grave(严重的)
+13.grief [n.悲伤,悲痛] 词根:griev(重,悲伤) | 记忆:心情沉重→悲伤 | 相关:grieve(使悲伤)
+14.fright [n.惊吓,恐怖] 记忆:联想fight(战斗)→战斗让人害怕 | 相关:frighten(使害怕)
+15.frighten [v.使害怕] 词根:fright(惊吓)+-en(使...) | 记忆:使惊吓→使害怕 | 相关:fright(惊吓)
+16.distress [n./v.痛苦,苦恼] 词根:dis-(分开)+stress(压力) | 记忆:压力分开→痛苦 | 相关:stress(压力)
+17.tempt [v.诱惑,引诱] 记忆:联想attempt(尝试)→诱惑你尝试 | 相关:temptation(诱惑)
+18.esteem [n./v.尊重,敬重] 记忆:联想estimate(估计)→值得估计→尊重
+19.conscience [n.良心,道德心] 词根:con-(共同)+sci(知道)+-ence | 记忆:共同知道对错→良心 | 相关:conscious(有意识的), science(科学)
+20.conscious [a.有意识的,清醒的] 词根:con-(共同)+sci(知道)+-ous | 记忆:共同知道→有意识的 | 相关:conscience(良心), unconscious(无意识的)
+21.unconscious [a.无意识的,昏迷的] 词根:un-(不)+conscious(有意识的) | 记忆:没有意识→无意识的
+22.psychological [a.心理的] 词根:psych(心理)+-ology(学科)+-ical | 记忆:心理学科的 | 相关:psychology(心理学), psyche(心灵)
+23.mind-set [n.心态,思维模式] 词根:mind(思维)+set(设置) | 记忆:思维设置→心态
+24.impulse [n.冲动,推动] 词根:im-(进入)+pulse(推动) | 记忆:推动进入→冲动 | 相关:pulse(脉搏), impulsive(冲动的)
+25.regret [n./v.后悔,遗憾] 词根:re-(再次)+gret(哭泣) | 记忆:再次哭泣→后悔
+
+========== 【经济/商业类】Economics & Business ==========
+26.quotation [n.报价,引文] 词根:quot(数量)+-ation | 记忆:给出数量→报价 | 相关:quote(引用), quota(配额)
+27.subsidy [n.补贴,津贴] 词根:sub-(下面)+sid(坐)+-y | 记忆:坐在下面支持→补贴 | 相关:subsidiary(辅助的)
+28.mortgage [n.抵押贷款] 词根:mort(死)+gage(担保) | 记忆:死担保→抵押(还不了就死) | 联想:mort(死亡)+gage(抵押品)
+29.downtime [n.停机时间,停工] 词根:down(下)+time(时间) | 记忆:时间下降→停工时间
+30.devaluation [n.贬值] 词根:de-(降低)+valu(价值)+-ation | 记忆:降低价值→贬值 | 相关:value(价值), evaluate(评估)
+31.recession [n.衰退,萧条] 词根:re-(回)+cess(走)+-ion | 记忆:往回走→衰退 | 相关:recede(后退), access(进入)
+32.loan [n./v.贷款,借出] 记忆:联想lend(借出)→loan是名词形式
+33.wage [n.工资] 记忆:联想age(年龄)→按年龄给工资
+34.broker [n.经纪人,中间人] 记忆:联想break(打破)→打破买卖双方→经纪人
+35.transaction [n.交易,事务] 词根:trans-(跨越)+act(行动)+-ion | 记忆:跨越行动→交易 | 相关:act(行动), interact(互动)
+36.turnover [n.营业额,周转] 词根:turn(转)+over(超过) | 记忆:转过来→周转
+37.premium [n.保险费,额外费用] 词根:pre-(前)+em(拿) | 记忆:提前拿→保险费 | 相关:premium(优质的)
+38.provision [n.供应,条款] 词根:pro-(前)+vis(看)+-ion | 记忆:提前看到→准备→供应 | 相关:provide(提供), vision(视野)
+39.hedge [n.树篱;v.对冲] 记忆:树篱可以"对冲"风险(金融术语)
+40.byproduct [n.副产品] 词根:by(旁边)+product(产品) | 记忆:旁边的产品→副产品
+41.surplus [n.过剩,盈余] 词根:sur-(超过)+plus(加) | 记忆:超过加→过剩 | 相关:plus(加), surplus(剩余的)
+42.realty [n.房地产] 词根:real(真实的)+-ty | 记忆:真实的东西→房地产 | 相关:real estate(房地产)
+43.ownership [n.所有权] 词根:owner(所有者)+-ship(状态) | 记忆:所有者的状态→所有权
+44.grocery [n.杂货店] 词根:groc(大量)+-ery(场所) | 记忆:大量货物的地方→杂货店 | 相关:grocer(杂货商)
+45.gross [a.总的,粗俗的;n.总额] 记忆:联想grass(草)→草很粗→粗俗的;总额
+46.plot [n.情节,地块;v.密谋] 记忆:一块地(plot)上密谋(plot)
+
+========== 【动作/行为类】Actions & Behaviors ==========
+47.plug [n.插头;v.插入] 记忆:联想plug(塞子)→插入塞子
+48.sew [v.缝纫] 记忆:联想saw(锯子)→用锯子缝(谐音记忆)
+49.refrain [v.克制;n.副歌] 词根:re-(回)+frain(拉) | 记忆:拉回来→克制 | 相关:restrain(限制)
+50.relay [n./v.接力,转播] 词根:re-(再次)+lay(放置) | 记忆:再次放置→接力传递
+51.dismiss [v.解雇,驳回] 词根:dis-(分开)+miss(送) | 记忆:送分开→解雇 | 相关:miss(错过), mission(任务)
+52.indulge/indulgence [v./n.沉溺,纵容] 词根:in-(进入)+dulg(温和) | 记忆:进入温和→纵容 | 相关:indulgent(纵容的)
+53.devote [v.奉献,致力于] 词根:de-(完全)+vot(发誓) | 记忆:完全发誓→奉献 | 相关:vow(誓言), vote(投票)
+54.discriminate [v.歧视,区分] 词根:dis-(分开)+crimin(犯罪)+-ate | 记忆:分开犯罪→歧视 | 相关:crime(犯罪), discriminate(区分)
+55.imitate [v.模仿] 词根:imit(相似)+-ate | 记忆:使相似→模仿 | 相关:image(形象), imitation(模仿)
+56.induce/inducement [v./n.诱导,引起] 词根:in-(进入)+duce(引导) | 记忆:引导进入→诱导 | 相关:deduce(推断), reduce(减少)
+57.gather [v.聚集,收集] 记忆:联想together(一起)→聚集在一起
+58.depict [v.描绘,描述] 词根:de-(完全)+pict(画) | 记忆:完全画→描绘 | 相关:picture(图片), pictorial(图画的)
+59.violate [v.违反,侵犯] 词根:viol(暴力)+-ate | 记忆:使用暴力→违反 | 相关:violence(暴力), violent(暴力的)
+60.accuse [v.指控,指责] 词根:ac-(朝向)+cuse(原因) | 记忆:朝向原因→指控 | 相关:excuse(借口), cause(原因)
+61.avert [v.避免,转移] 词根:a-(离开)+vert(转) | 记忆:转离开→避免 | 相关:convert(转换), divert(转移)
+62.blend [v./n.混合] 记忆:联想blind(盲的)→混合后看不清
+63.dedicate [v.奉献,致力于] 词根:de-(完全)+dic(说)+-ate | 记忆:完全说→奉献 | 相关:dictate(口述), dictionary(字典)
+64.disguise [v./n.伪装,掩饰] 词根:dis-(不)+guise(外表) | 记忆:不是真实外表→伪装 | 相关:guise(外表)
+65.endure [v.忍受,持续] 词根:en-(使)+dur(持续) | 记忆:使持续→忍受 | 相关:during(在...期间), durable(持久的)
+66.impart [v.传授,给予] 词根:im-(进入)+part(部分) | 记忆:进入部分→传授 | 相关:part(部分), participate(参与)
+67.incur [v.招致,遭受] 词根:in-(进入)+cur(跑) | 记忆:跑进去→招致 | 相关:occur(发生), current(当前的)
+68.linger [v.徘徊,逗留] 记忆:联想long(长)→长时间逗留→徘徊
+69.fasten [v.系紧,固定] 词根:fast(快,紧)+-en(使...) | 记忆:使紧→系紧 | 相关:fast(快的,紧的)
+70.endeavor [n./v.努力,尝试] 词根:en-(使)+deavor(责任) | 记忆:使承担责任→努力 | 相关:devoir(责任)
+71.derive [v.源于,获得] 词根:de-(从)+rive(河流) | 记忆:从河流来→源于 | 相关:river(河流), arrive(到达)
+72.reap [v.收获,获得] 记忆:联想ripe(成熟的)→成熟后收获
+73.sow [v.播种] 记忆:联想sew(缝纫)→播种像缝纫一样
+74.revive [v.复活,恢复] 词根:re-(再次)+viv(生命)+-e | 记忆:再次生命→复活 | 相关:survive(生存), vivid(生动的)
+75.shrug [v./n.耸肩] 记忆:联想shrug(耸肩)表示无奈
+76.sip [v./n.小口喝] 记忆:联想tip(小费)→小口喝
+77.soak [v.浸泡,湿透] 记忆:联想soap(肥皂)→用肥皂浸泡
+78.wander [v.漫游,徘徊] 记忆:联想wonder(想知道)→漫游时想知道
+79.whip [n.鞭子;v.鞭打] 记忆:联想whip(鞭子)的声音
+80.rectify [v.纠正,修正] 词根:rect(直)+-ify(使...) | 记忆:使直→纠正 | 相关:correct(正确的), direct(直接的)
+81.anticipate [v.预期,期望] 词根:anti-(前)+cip(拿)+-ate | 记忆:提前拿→预期 | 相关:participate(参与), capture(捕获)
+82.diminish [v.减少,缩小] 词根:di-(分开)+min(小)+-ish | 记忆:使变小→减少 | 相关:minimum(最小), minor(较小的)
+83.lessen [v.减少,减轻] 词根:less(少)+-en(使...) | 记忆:使少→减少 | 相关:less(更少), least(最少)
+84.widen [v.加宽,扩大] 词根:wide(宽)+-en(使...) | 记忆:使宽→加宽 | 相关:wide(宽的), width(宽度)
+85.inform [v.通知,告知] 词根:in-(进入)+form(形式) | 记忆:进入形式→通知 | 相关:form(形式), information(信息)
+86.prosecute [v.起诉,检举] 词根:pro-(前)+secut(跟随)+-e | 记忆:向前跟随→起诉 | 相关:execute(执行), sequence(顺序)
+87.lean [v.倾斜,依靠;a.瘦的] 记忆:联想lean(瘦的)→瘦的人容易倾斜
+88.praise [v./n.赞扬,赞美] 记忆:联想raise(举起)→举起赞扬
+89.undermine [v.破坏,削弱] 词根:under(下面)+mine(挖) | 记忆:在下面挖→破坏基础 | 相关:mine(矿,挖)
+90.discern [v.识别,看出] 词根:dis-(分开)+cern(区分) | 记忆:分开区分→识别 | 相关:concern(关心), certain(确定的)
+91.retreat [v./n.撤退,退却] 词根:re-(回)+treat(处理) | 记忆:回处理→撤退 | 相关:treat(对待), treatment(治疗)
+92.drop out [phr.退出,辍学] 词根:drop(掉落)+out(出) | 记忆:掉出去→退出
+93.fulfill [v.履行,完成] 词根:ful(满)+fill(填) | 记忆:填满→完成 | 相关:full(满的), fill(填)
+94.halve [v.减半,对半分] 词根:half(一半)+-e | 记忆:使成一半→减半 | 相关:half(一半)
+95.designate [v.指定,指派] 词根:de-(完全)+sign(标记)+-ate | 记忆:完全标记→指定 | 相关:sign(标记), design(设计)
+96.reckon [v.认为,计算] 记忆:联想reckon(认为)→计算后认为
+97.emerge [v.出现,浮现] 词根:e-(出)+merge(沉) | 记忆:从沉没中出来→出现 | 相关:merge(合并), submerge(淹没)
+
+========== 【状态/性质类】States & Qualities ==========
+98.inherent [a.固有的,内在的] 词根:in-(在)+her(粘)+-ent | 记忆:粘在里面→固有的 | 相关:adhere(粘附), coherent(连贯的)
+99.indispensable [a.不可缺少的] 词根:in-(不)+dis-(分开)+pens(悬挂)+-able | 记忆:不能分开悬挂→不可缺少 | 相关:dispense(分配), expense(费用)
+100.immersive [a.沉浸式的] 词根:im-(进入)+mers(沉)+-ive | 记忆:进入沉没的→沉浸的 | 相关:immerse(沉浸), submerge(淹没)
+101.substantial [a.大量的,实质的] 词根:sub-(下面)+stant(站)+-ial | 记忆:站在下面支撑→实质的 | 相关:substance(物质), constant(持续的)
+102.subsequent [a.随后的,后来的] 词根:sub-(下面)+sequ(跟随)+-ent | 记忆:下面跟随→随后的 | 相关:sequence(顺序), consequence(结果)
+103.genuine [a.真正的,真诚的] 记忆:联想gene(基因)→真正的基因
+104.rigid [a.僵硬的,严格的] 词根:rig(硬)+-id | 记忆:硬的→僵硬的 | 相关:rigor(严格), rigorous(严格的)
+105.rigorous [a.严格的,严密的] 词根:rigor(严格)+-ous | 记忆:严格的 | 相关:rigid(僵硬的), rigor(严格)
+106.plausible [a.合理的,可信的] 词根:plaus(鼓掌)+-ible | 记忆:值得鼓掌→合理的 | 相关:applause(鼓掌), applaud(鼓掌)
+107.insatiable [a.不知足的,贪得无厌的] 词根:in-(不)+sati(满足)+-able | 记忆:不能满足的→不知足的 | 相关:satisfy(满足), satiate(使满足)
+108.beneficial [a.有益的] 词根:bene(好)+fic(做)+-ial | 记忆:做好事→有益的 | 相关:benefit(利益), benefit(好处)
+109.excessive [a.过度的,过分的] 词根:ex-(出)+cess(走)+-ive | 记忆:走出界限→过度的 | 相关:exceed(超过), access(进入)
+110.corrupt [a.腐败的;v.腐蚀] 词根:cor-(完全)+rupt(破) | 记忆:完全破→腐败 | 相关:rupture(破裂), interrupt(打断)
+111.costly [a.昂贵的,代价高的] 词根:cost(成本)+-ly | 记忆:成本高的→昂贵的 | 相关:cost(成本)
+112.intricate [a.复杂的,错综的] 词根:in-(进入)+tric(诡计)+-ate | 记忆:进入诡计→复杂的 | 相关:trick(诡计), tricky(狡猾的)
+113.superficial [a.表面的,肤浅的] 词根:super-(上)+fic(面)+-ial | 记忆:上面的面→表面的 | 相关:face(脸), surface(表面)
+114.progressive [a.进步的,渐进的] 词根:pro-(前)+gress(走)+-ive | 记忆:向前走→进步的 | 相关:progress(进步), regress(倒退)
+115.proper [a.适当的,正确的] 记忆:联想property(财产)→适当的财产
+116.radical [a.根本的,激进的;n.激进分子] 词根:radic(根)+-al | 记忆:根部的→根本的 | 相关:root(根), eradicate(根除)
+117.resolute [a.坚决的,果断的] 词根:re-(加强)+solut(解决)+-e | 记忆:加强解决→坚决的 | 相关:solve(解决), solution(解决方案)
+118.savage [a.野蛮的,残暴的;n.野蛮人] 记忆:联想save(拯救)→野蛮人需要拯救
+119.subtle [a.微妙的,精细的] 记忆:联想subtitle(字幕)→字幕很微妙
+120.unexpected [a.意外的,想不到的] 词根:un-(不)+expect(期望)+-ed | 记忆:不期望的→意外的 | 相关:expect(期望)
+121.compulsory [a.强制的,义务的] 词根:com-(共同)+puls(推)+-ory | 记忆:共同推→强制的 | 相关:compel(强迫), pulse(脉搏)
+122.conscientious [a.认真的,尽责的] 词根:con-(共同)+sci(知道)+-ent+-ious | 记忆:共同知道对错→尽责的 | 相关:conscience(良心), science(科学)
+123.instrumental [a.有帮助的,工具的] 词根:instrument(工具)+-al | 记忆:工具的→有帮助的 | 相关:instrument(工具), instruction(指令)
+124.contemporary [a.当代的,同时代的] 词根:con-(共同)+tempor(时间)+-ary | 记忆:共同时间→同时代的 | 相关:temporary(临时的), tempo(节奏)
+125.decent [a.体面的,正派的] 词根:de-(完全)+cent(百) | 记忆:完全百分→体面的 | 相关:century(世纪), percent(百分比)
+126.mighty [a.强大的,有力的] 词根:might(力量)+-y | 记忆:有力量的→强大的 | 相关:might(可能,力量)
+127.noble [a.高贵的,高尚的;n.贵族] 记忆:联想noble(高贵的)→贵族很高贵
+128.extravagant [a.奢侈的,过度的] 词根:extra-(超出)+vag(走)+-ant | 记忆:超出走→过度的 | 相关:extra(额外的), vague(模糊的)
+129.drastic [a.激烈的,严厉的] 记忆:联想dramatic(戏剧性的)→激烈的
+130.dull [a.迟钝的,沉闷的] 记忆:联想doll(娃娃)→娃娃很迟钝
+131.slippery [a.滑的,狡猾的] 词根:slip(滑)+-ery | 记忆:滑的 | 相关:slip(滑倒)
+132.shrewd [a.精明的,敏锐的] 记忆:联想shrew(泼妇)→泼妇很精明
+133.vital [a.重要的,生命的] 词根:vit(生命)+-al | 记忆:生命的→重要的 | 相关:vitamin(维生素), survive(生存)
+134.concise [a.简洁的,简明的] 词根:con-(完全)+cis(切)+-e | 记忆:完全切→简洁的 | 相关:precise(精确的), decide(决定)
+135.familiar [a.熟悉的,常见的] 词根:famili(家庭)+-ar | 记忆:家庭的→熟悉的 | 相关:family(家庭), familiarize(使熟悉)
+136.accustomed [a.习惯的,适应的] 词根:ac-(朝向)+custom(习惯)+-ed | 记忆:朝向习惯→习惯的 | 相关:custom(习惯), customer(顾客)
+137.thick [a.厚的,浓的] 记忆:联想think(想)→厚的书需要想
+
+========== 【时间/顺序类】Time & Sequence ==========
+138.outset [n.开始,开端] 词根:out(出)+set(设置) | 记忆:设置出来→开始 | 相关:set(设置), offset(抵消)
+139.preliminary [a.初步的,预备的] 词根:pre-(前)+limin(门槛)+-ary | 记忆:门槛前的→初步的 | 相关:limit(限制), eliminate(消除)
+140.dawn [n.黎明,开端] 记忆:联想down(下)→太阳从下升起→黎明
+141.episode [n.插曲,一集] 词根:epi-(在...上)+sod(路)+-e | 记忆:在路上→插曲 | 相关:period(时期)
+142.occasion [n.场合,机会] 词根:oc-(朝向)+cas(落下)+-ion | 记忆:朝向落下→机会 | 相关:case(情况), casual(随意的)
+143.occur [v.发生,出现] 词根:oc-(朝向)+cur(跑) | 记忆:跑向→发生 | 相关:current(当前的), course(过程)
+144.occurrence [n.发生,事件] 词根:occur(发生)+-ence | 记忆:发生的事→事件 | 相关:occur(发生)
+145.anniversary [n.周年纪念日] 词根:anni(年)+vers(转)+-ary | 记忆:年转→周年 | 相关:annual(年度的), universe(宇宙)
+146.seldom [ad.很少,不常] 记忆:联想seldom(很少)→很少见
+147.presumably [ad.大概,可能] 词根:pre-(前)+sum(拿)+-ably | 记忆:提前拿→大概 | 相关:assume(假设), resume(恢复)
+148.hence [ad.因此,从此] 记忆:联想here(这里)→从这里→因此
+149.lag [v./n.滞后,延迟] 记忆:联想leg(腿)→腿慢→滞后
+
+========== 【空间/位置类】Space & Location ==========
+150.rail [n.栏杆,铁轨] 记忆:联想trail(小径)→铁轨像小径
+151.landscape [n.风景,景观] 词根:land(土地)+scape(形状) | 记忆:土地形状→风景 | 相关:land(土地), escape(逃跑)
+152.headquarters [n.总部,司令部] 词根:head(头)+quarters(四分之一,住所) | 记忆:头的住所→总部 | 相关:head(头), quarter(四分之一)
+153.campus [n.校园] 记忆:联想camp(营地)→校园像营地
+154.suburban [a.郊区的] 词根:sub-(下面)+urb(城市)+-an | 记忆:城市下面的→郊区的 | 相关:urban(城市的), suburb(郊区)
+155.downward [a./ad.向下的] 词根:down(下)+-ward(方向) | 记忆:向下的方向 | 相关:down(下), upward(向上的)
+156.parcel [n.包裹,小包] 记忆:联想part(部分)→包裹是部分
+
+========== 【成对词/词根相关】Word Pairs & Roots ==========
+157.scarce/sacred/scare [a.稀少的/神圣的/惊吓] 记忆:scarce(稀少), sacred(神圣的), scare(惊吓) | 词根:sacr(神圣) | 相关:sacrifice(牺牲)
+158.grieve/grief [v./n.悲伤] 词根:griev(重,悲伤) | 记忆:grieve(使悲伤), grief(悲伤) | 相关:grave(严重的)
+159.diagnose/diagnosis [v./n.诊断] 词根:dia-(通过)+gnos(知道) | 记忆:通过知道→诊断 | 相关:know(知道), recognize(认识)
+160.occur/occurrence [v./n.发生] 词根:oc-(朝向)+cur(跑) | 记忆:occur(发生), occurrence(事件) | 相关:current(当前的)
+161.fright/frighten [n./v.惊吓] 记忆:fright(惊吓), frighten(使害怕) | 相关:afraid(害怕的)
+162.conscious/unconscious [a.有意识的/无意识的] 词根:con-(共同)+sci(知道) | 记忆:conscious(有意识的), unconscious(无意识的) | 相关:conscience(良心)
+163.favorable/favourable [a.有利的] 词根:favor(喜爱)+-able | 记忆:值得喜爱的→有利的 | 相关:favor(喜爱), favorite(最喜欢的)
+164.indulge/indulgence [v./n.沉溺] 词根:in-(进入)+dulg(温和) | 记忆:indulge(沉溺), indulgence(纵容) | 相关:indulgent(纵容的)
+165.induce/inducement [v./n.诱导] 词根:in-(进入)+duce(引导) | 记忆:induce(诱导), inducement(诱因) | 相关:deduce(推断)
+
+========== 【人物/关系类】People & Relationships ==========
+166.rival [n.竞争对手;v.竞争] 词根:riv(河流) | 记忆:河流两岸的人→竞争对手 | 相关:river(河流), arrive(到达)
+167.companion [n.同伴,伙伴] 词根:com-(共同)+pan(面包)+-ion | 记忆:共同吃面包→同伴 | 相关:company(公司), accompany(陪伴)
+168.spouse [n.配偶] 记忆:联想house(房子)→配偶在房子里
+169.adviser [n.顾问,建议者] 词根:ad-(朝向)+vis(看)+-er | 记忆:朝向看的人→顾问 | 相关:advice(建议), vision(视野)
+170.counterpart [n.对应的人或物] 词根:counter(相反)+part(部分) | 记忆:相反的部分→对应物 | 相关:counter(相反), part(部分)
+171.pupil [n.学生,瞳孔] 记忆:学生像瞳孔一样需要关注
+172.pioneer [n.先驱,开拓者] 记忆:联想piano(钢琴)→钢琴先驱
+
+========== 【物品/材料类】Objects & Materials ==========
+173.staple [n.订书钉,主食;a.主要的] 记忆:订书钉是主要的固定工具
+174.stockpile [n./v.储备,库存] 词根:stock(库存)+pile(堆) | 记忆:库存堆→储备 | 相关:stock(股票,库存), pile(堆)
+175.feather [n.羽毛] 记忆:联想weather(天气)→羽毛受天气影响
+176.gown [n.长袍,礼服] 记忆:联想town(城镇)→城镇里的人穿长袍
+177.glue [n.胶水;v.粘合] 记忆:联想blue(蓝色)→蓝色胶水
+178.cotton [n.棉花] 记忆:联想button(按钮)→按钮用棉花做
+179.textile [n.纺织品] 词根:text(编织)+-ile | 记忆:编织的东西→纺织品 | 相关:text(文本), texture(质地)
+180.carrot [n.胡萝卜] 记忆:联想car(汽车)→汽车载胡萝卜
+181.wheat [n.小麦] 记忆:联想what(什么)→什么小麦
+182.barrel [n.桶,枪管] 记忆:联想bar(酒吧)→酒吧有桶
+183.ladder [n.梯子] 记忆:联想latter(后者)→后者用梯子
+184.copper [n.铜] 记忆:联想copy(复制)→铜可以复制
+185.calcium [n.钙] 记忆:联想calculate(计算)→计算钙含量
+
+========== 【抽象概念类】Abstract Concepts ==========
+186.spite [n.恶意,怨恨] 记忆:联想spit(吐)→吐恶意
+187.stripe [n.条纹,种类] 记忆:联想strip(条)→条纹
+188.surge [n./v.激增,汹涌] 记忆:联想urge(催促)→催促激增
+189.proverb [n.谚语,格言] 词根:pro-(前)+verb(词) | 记忆:前面的词→谚语 | 相关:verb(动词), verbal(口头的)
+190.penalty [n.惩罚,罚款] 词根:pen(惩罚)+-alty | 记忆:惩罚 | 相关:punish(惩罚), pain(痛苦)
+191.trial [n.试验,审判] 记忆:联想try(尝试)→尝试试验
+192.conventional [a.传统的,常规的] 词根:con-(共同)+vent(来)+-ion+-al | 记忆:共同来的→传统的 | 相关:convention(惯例), invent(发明)
+193.marital [a.婚姻的] 词根:marit(婚姻)+-al | 记忆:婚姻的 | 相关:marry(结婚), marriage(婚姻)
+194.milestone [n.里程碑,重要事件] 词根:mile(英里)+stone(石头) | 记忆:英里石头→里程碑
+195.rhetoric [n.修辞,花言巧语] 记忆:联想rhetoric(修辞)→花言巧语
+196.ritual [n.仪式,惯例] 词根:rit(仪式)+-ual | 记忆:仪式 | 相关:rite(仪式), write(写)
+197.survey [n./v.调查,测量] 词根:sur-(上)+vey(看) | 记忆:向上看→调查 | 相关:view(看), review(回顾)
+198.prospect [n.前景,可能性] 词根:pro-(前)+spect(看) | 记忆:向前看→前景 | 相关:spectacle(景象), inspect(检查)
+199.mandate [n./v.授权,命令] 词根:mand(命令)+-ate | 记忆:命令 | 相关:command(命令), demand(要求)
+200.patriotism [n.爱国主义] 词根:patri(父亲,祖国)+-ot+-ism | 记忆:祖国主义→爱国主义 | 相关:patriot(爱国者), father(父亲)
+201.notion [n.概念,想法] 词根:not(知道)+-ion | 记忆:知道的东西→概念 | 相关:note(笔记), notice(注意)
+202.evaluation [n.评估,评价] 词根:e-(出)+valu(价值)+-ation | 记忆:出价值→评估 | 相关:value(价值), valuable(有价值的)
+203.synthesis [n.综合,合成] 词根:syn-(共同)+thes(放置)+-is | 记忆:共同放置→综合 | 相关:thesis(论文), hypothesis(假设)
+204.co-ordinate [v./n.协调,坐标] 词根:co-(共同)+ordin(顺序)+-ate | 记忆:共同顺序→协调 | 相关:order(顺序), ordinary(普通的)
+205.verdict [n.裁决,判决] 词根:ver(真实)+dict(说) | 记忆:真实地说→裁决 | 相关:verify(验证), dictionary(字典)
+206.instinct [n.本能,直觉] 词根:in-(进入)+stinct(刺) | 记忆:刺入→本能 | 相关:distinct(明显的), extinct(灭绝的)
+207.curriculum [n.课程,课程表] 词根:curr(跑)+-iculum | 记忆:跑的过程→课程 | 相关:current(当前的), occur(发生)
+208.fluctuation [n.波动,起伏] 词根:fluct(流动)+-uation | 记忆:流动→波动 | 相关:flow(流动), fluent(流利的)
+209.incentive [n.激励,刺激] 词根:in-(进入)+cent(唱)+-ive | 记忆:进入唱→激励 | 相关:accent(口音), cent(分)
+210.leisure [n.闲暇,休闲] 记忆:联想pleasure(快乐)→闲暇带来快乐
+211.integrity [n.正直,完整] 词根:integr(完整)+-ity | 记忆:完整→正直 | 相关:integrate(整合), entire(全部的)
+212.inquiry [n.询问,调查] 词根:in-(进入)+quir(问)+-y | 记忆:进入问→询问 | 相关:question(问题), require(要求)
+213.fiction [n.小说,虚构] 词根:fic(做)+-tion | 记忆:做出来的→虚构 | 相关:fact(事实), factory(工厂)
+214.friction [n.摩擦,冲突] 词根:frict(摩擦)+-ion | 记忆:摩擦 | 相关:fraction(分数), fracture(骨折)
+215.disorder [n.混乱,失调] 词根:dis-(不)+order(顺序) | 记忆:不顺序→混乱 | 相关:order(顺序), ordinary(普通的)
+216.harmony [n.和谐,协调] 记忆:联想harm(伤害)→和谐避免伤害
+217.hint [n./v.暗示,提示] 记忆:联想hunt(打猎)→打猎需要提示
+218.wholly [ad.完全地,全部地] 词根:whole(全部)+-ly | 记忆:全部地 | 相关:whole(全部的), hole(洞)
+219.versus [prep.对,与...相对] 记忆:缩写vs.→versus
+220.vice [n.恶习,缺点] 记忆:联想nice(好的)→vice是反的
+221.vice versa [phr.反之亦然] 词根:vice(相反)+versa(转) | 记忆:相反转→反之亦然
+222.so-called [a.所谓的] 词根:so(如此)+called(叫) | 记忆:如此叫的→所谓的
+223.up to [phr.直到,多达] 记忆:向上到→直到
+224.toll [n.通行费,代价] 记忆:联想tall(高的)→高代价
+225.twinkle [v./n.闪烁,眨眼] 记忆:联想tinkle(叮当声)→闪烁像叮当
+226.utter [v.说出;a.完全的] 记忆:联想butter(黄油)→说出黄油
+227.obscure [a.模糊的;v.掩盖] 词根:ob-(覆盖)+scur(覆盖) | 记忆:覆盖→模糊 | 相关:secure(安全的)
+228.mess [n.混乱,脏乱] 记忆:联想mass(大量)→大量混乱
+229.fraud [n.欺诈,骗子] 记忆:联想fright(惊吓)→欺诈让人惊吓
+230.halt [v./n.停止,暂停] 记忆:联想half(一半)→停止一半
+231.ought [aux.应该,应当] 记忆:联想thought(思想)→应该思考
+232.acre [n.英亩] 记忆:联想ache(疼痛)→英亩让人疼痛
+
+========== 【自然/现象类】Nature & Phenomena ==========
+233.flock [n.群,大量;v.聚集] 记忆:联想lock(锁)→锁住一群
+234.hurricane [n.飓风] 词根:hurri(匆忙)+cane(甘蔗) | 记忆:匆忙的甘蔗→飓风 | 相关:hurry(匆忙)
+235.fuse [n.保险丝;v.融合] 记忆:联想use(使用)→使用保险丝
+236.decay [v./n.腐烂,衰退] 词根:de-(下)+cay(落下) | 记忆:落下→腐烂 | 相关:case(情况)
+237.spiral [n.螺旋;a.螺旋的] 记忆:联想spirit(精神)→精神螺旋上升
+238.stagnation [n.停滞,不景气] 词根:stagn(停滞)+-ation | 记忆:停滞 | 相关:stagnant(停滞的), stage(阶段)
+
+========== 【其他/特殊类】Others & Special ==========
+239.roughly [ad.粗略地,大约] 词根:rough(粗糙的)+-ly | 记忆:粗糙地→粗略地 | 相关:rough(粗糙的), tough(坚韧的)
+240.spree [n.狂欢,挥霍] 记忆:联想free(自由)→自由狂欢
+241.pile [n.堆;v.堆积] 记忆:联想file(文件)→文件堆
+242.straddle [v.跨坐,跨越] 记忆:联想saddle(马鞍)→跨坐马鞍
+243.clinic [n.诊所,门诊] 词根:clin(倾斜)+-ic | 记忆:倾斜床→诊所 | 相关:incline(倾斜), decline(下降)
+244.Bibliography [n.参考文献,书目] 词根:biblio(书)+graph(写)+-y | 记忆:写书→书目 | 相关:bible(圣经), graph(图表)
+245.aeroplane [n.飞机] 词根:aero(空气)+plane(平面) | 记忆:空气平面→飞机 | 相关:air(空气), plane(飞机)
+246.aerospace [n.航空航天] 词根:aero(空气)+space(空间) | 记忆:空气空间→航空航天 | 相关:air(空气), space(空间)
+247.aviation [n.航空,飞行] 词根:avi(鸟)+-ation | 记忆:鸟的行为→航空 | 相关:aviary(鸟舍), navigate(导航)
+248.compliment [n./v.赞美,恭维] 词根:com-(完全)+pli(填)+-ment | 记忆:完全填→赞美 | 相关:complete(完成), implement(实施)
+249.dazzle [v.使目眩,使赞叹] 记忆:联想dizzy(头晕的)→使目眩
+250.hinder [v.阻碍,妨碍] 记忆:联想behind(后面)→在后面→阻碍 | 相关:behind(后面), hind(后面的)
+251.blunder [n./v.大错,失误] 记忆:联想blunder(大错)→像雷声一样的大错
