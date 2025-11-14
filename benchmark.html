@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iSpacs Viewer 当前浏览器检测支持</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .test-item {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        background: #f5f5f5;
+      }
+
+      .pass {
+        color: #0a0;
+        font-weight: bold;
+      }
+
+      .fail {
+        color: #a00;
+        font-weight: bold;
+      }
+
+      #glCanvas {
+        border: 1px solid #ccc;
+        margin: 20px 0;
+        display: block;
+      }
+
+      #finalResult {
+        padding: 15px;
+        margin-top: 20px;
+        font-size: 1.2em;
+        text-align: center;
+      }
+
+      .hardware-accelerated {
+        background: #dfd;
+        border: 2px solid #0a0;
+      }
+
+      .software-rendering {
+        background: #fdd;
+        border: 2px solid #a00;
+      }
+
+      .performance-value {
+        font-weight: bold;
+        color: #05a;
+      }
+
+      #loading {
+        color: #666;
+        font-style: italic;
+      }
+
+      .benchmark-details {
+        margin-top: 10px;
+        padding: 10px;
+        background: #f9f9f9;
+        border-left: 3px solid #05a;
+        font-size: 0.9em;
+      }
+
+      .tier-info {
+        margin: 5px 0;
+        padding: 5px;
+        border-radius: 3px;
+      }
+
+      .tier-excellent { background: #d4edda; color: #155724; border-left: 4px solid #28a745; }
+      .tier-good { background: #d1ecf1; color: #0c5460; border-left: 4px solid #17a2b8; }
+      .tier-acceptable { background: #fff3cd; color: #856404; border-left: 4px solid #ffc107; }
+      .tier-poor { background: #f8d7da; color: #721c24; border-left: 4px solid #dc3545; }
+    </style>
+  </head>
+
+  <body>
+    <h1>iSpacs Viewer 当前浏览器检测支持</h1>
+    <p>必须通过全部五项检测才能确认支持所有功能</p>
+
+    <canvas id="glCanvas" width="512" height="512"></canvas>
+    <div id="loading">正在检测中,请稍候...</div>
+    <div id="testResults"></div>
+    <div id="finalResult"></div>
+
+    <script>
+      // VTK性能基准配置
+      const VTK_BENCHMARK_CONFIG = {
+        // 标准化测试参数
+        canvasSize: 512,           // 固定分辨率
+        testDuration: 3000,        // 3秒测试(增加测试时长提高准确性)
+        warmupFrames: 60,          // 60帧预热(确保GPU进入高性能状态)
+        
+        // VTK典型场景参数 - 加大负载区分性能
+        triangleCount: 100000,     // 增加到10万三角形
+        complexShaderOps: 20,      // 复杂着色器运算次数
+        textureSize: 2048,         // 2K纹理
+        lightCount: 4,             // 4个动态光源
+        
+        // 严格的性能分级标准
+        tiers: {
+          excellent: {
+            minFPS: 55,
+            minScore: 80,
+            color: 'tier-excellent',
+            description: '🚀 高性能机器 - 无压力运行VTK程序(大型医疗模型、复杂场景、流畅交互)'
+          },
+          good: {
+            minFPS: 40,
+            minScore: 60,
+            color: 'tier-good',
+            description: '✓ 良好性能 - 可以运行VTK程序(常规医疗模型、标准场景)'
+          },
+          acceptable: {
+            minFPS: 25,
+            minScore: 50,
+            color: 'tier-acceptable',
+            description: '⚠ 勉强可用 - 勉强可以运行(简单场景、可能卡顿)'
+          },
+          poor: {
+            minFPS: 0,
+            minScore: 0,
+            color: 'tier-poor',
+            description: '✘ 性能不足 - 不能运行或不能流畅运行VTK程序'
+          }
+        }
+      };
+
+      async function runReliableDetection() {
+        const canvas = document.getElementById("glCanvas");
+        const testResults = document.getElementById("testResults");
+        const finalResult = document.getElementById("finalResult");
+        const loading = document.getElementById("loading");
+
+        // 确保Canvas尺寸一致
+        canvas.width = VTK_BENCHMARK_CONFIG.canvasSize;
+        canvas.height = VTK_BENCHMARK_CONFIG.canvasSize;
+
+        try {
+          // 1. 初始化WebGL2
+          const gl = canvas.getContext("webgl2", {
+            antialias: false,
+            preserveDrawingBuffer: true,
+            powerPreference: "high-performance"  // 强制高性能模式
+          });
+          
+          if (!gl) {
+            testResults.innerHTML =
+              '<div class="test-item fail">✘ 浏览器不支持WebGL2</div>';
+            loading.style.display = "none";
+            return;
+          }
+
+          // 2. 获取渲染器信息
+          const debugExt = gl.getExtension("WEBGL_debug_renderer_info");
+          let vendor = "未知", renderer = "未知";
+          if (debugExt) {
+            vendor = gl.getParameter(debugExt.UNMASKED_VENDOR_WEBGL) || vendor;
+            renderer = gl.getParameter(debugExt.UNMASKED_RENDERER_WEBGL) || renderer;
+          }
+
+          // 3. GPU信息识别(改进版)
+          const gpuInfo = identifyGPU(renderer, vendor);
+
+          // 4. 运行所有测试
+          const tests = [
+            {
+              name: "浏览器版本检测",
+              check: () => checkBrowserVersion(),
+              description: "检查浏览器是否为109以上edge或者chrome(不包含109)",
+            },
+            {
+              name: "渲染器检测",
+              check: () => checkRenderer(renderer),
+              description: "检查是否为已知软件渲染器",
+            },
+            {
+              name: "高性能特性检测",
+              check: () => checkHighPerfFeatures(gl),
+              description: "检查是否支持2个以上高性能扩展",
+            },
+            {
+              name: "大纹理支持",
+              check: () => gl.getParameter(gl.MAX_TEXTURE_SIZE) >= 8192,
+              description: "检查是否支持8192x8192以上纹理",
+            },
+            {
+              name: "VTK性能基准测试",
+              check: async () => {
+                return await runVTKBenchmark(gl, gpuInfo);
+              },
+              description: "模拟VTK典型场景进行综合性能评估",
+            },
+          ];
+
+          // 5. 执行并显示所有测试
+          let allPassed = true;
+          testResults.innerHTML = "";
+
+          for (const test of tests) {
+            const result = await (typeof test.check === "function"
+              ? test.check()
+              : test.check);
+            const passed = result.passed !== undefined ? result.passed : result;
+
+            if (!passed) allPassed = false;
+
+            let testHtml = `
+              <div class="test-item">
+                <strong>${test.name}:</strong> 
+                <span class="${passed ? "pass" : "fail"}">
+                  ${passed ? "✓ 通过" : "✘ 未通过"}
+                </span>
+                <div><small>${test.description}</small></div>
+            `;
+
+            if (result.details) {
+              testHtml += result.details;
+            }
+
+            testHtml += `</div>`;
+            testResults.innerHTML += testHtml;
+
+            renderSimpleScene(gl);
+          }
+
+          // 6. 显示最终结果
+          finalResult.className = allPassed
+            ? "hardware-accelerated"
+            : "software-rendering";
+          finalResult.innerHTML = allPassed
+            ? "<h2>✓ 硬件加速确认已启用</h2><p>所有检测项目均通过</p>"
+            : "<h2>✘ 未启用硬件加速</h2><p>未通过全部检测</p>";
+
+          // 显示详细配置信息
+          testResults.innerHTML += `
+            <div class="test-item">
+              <h3>系统信息</h3>
+              <p><strong>显卡供应商:</strong> ${vendor}</p>
+              <p><strong>渲染器:</strong> ${renderer}</p>
+              <p><strong>GPU识别:</strong> ${gpuInfo.name} (${gpuInfo.tier})</p>
+              <p><strong>浏览器版本:</strong> ${navigator.userAgent}</p>
+              <p><strong>WebGL版本:</strong> ${gl.getParameter(gl.VERSION)}</p>
+              <p><strong>最大纹理尺寸:</strong> ${gl.getParameter(gl.MAX_TEXTURE_SIZE)}</p>
+              <p><strong>最大渲染缓冲尺寸:</strong> ${gl.getParameter(gl.MAX_RENDERBUFFER_SIZE)}</p>
+              <p><strong>最大顶点属性:</strong> ${gl.getParameter(gl.MAX_VERTEX_ATTRIBS)}</p>
+            </div>
+          `;
+
+          loading.style.display = "none";
+          renderColorfulScene(gl);
+        } catch (error) {
+          loading.style.display = "none";
+          testResults.innerHTML = `<div class="test-item fail">检测出错: ${error.message}</div>`;
+        }
+      }
+
+      // GPU识别函数(更严格的性能预期)
+      function identifyGPU(renderer, vendor) {
+        const r = renderer.toLowerCase();
+        const v = vendor.toLowerCase();
+        
+        // NVIDIA GPU识别
+        if (r.includes('nvidia') || v.includes('nvidia')) {
+          if (r.includes('rtx')) {
+            const match = r.match(/rtx\s*(\d+)/i);
+            if (match) {
+              const model = parseInt(match[1]);
+              if (model >= 5000) return { name: `NVIDIA RTX ${model}`, tier: 'High-End', expectedScore: 95 };
+              if (model >= 4000) return { name: `NVIDIA RTX ${model}`, tier: 'High-End', expectedScore: 90 };
+              if (model >= 3000) return { name: `NVIDIA RTX ${model}`, tier: 'High-End', expectedScore: 85 };
+              if (model >= 2000) return { name: `NVIDIA RTX ${model}`, tier: 'Mid-Range', expectedScore: 75 };
+            }
+          }
+          if (r.includes('gtx')) {
+            const match = r.match(/gtx\s*(\d+)/i);
+            if (match) {
+              const model = parseInt(match[1]);
+              if (model >= 1600) return { name: `NVIDIA GTX ${model}`, tier: 'Mid-Range', expectedScore: 70 };
+              return { name: `NVIDIA GTX ${model}`, tier: 'Entry-Level', expectedScore: 60 };
+            }
+          }
+          if (r.includes('quadro') || r.includes('tesla')) {
+            return { name: 'NVIDIA Professional', tier: 'High-End', expectedScore: 85 };
+          }
+          return { name: 'NVIDIA GPU', tier: 'Unknown', expectedScore: 65 };
+        }
+        
+        // AMD GPU识别
+        if (r.includes('amd') || r.includes('radeon') || v.includes('amd')) {
+          if (r.includes('rx')) {
+            const match = r.match(/rx\s*(\d+)/i);
+            if (match) {
+              const model = parseInt(match[1]);
+              if (model >= 7000) return { name: `AMD RX ${model}`, tier: 'High-End', expectedScore: 88 };
+              if (model >= 6000) return { name: `AMD RX ${model}`, tier: 'High-End', expectedScore: 82 };
+              if (model >= 5000) return { name: `AMD RX ${model}`, tier: 'Mid-Range', expectedScore: 72 };
+            }
+          }
+          if (r.includes('vega')) return { name: 'AMD Vega', tier: 'Mid-Range', expectedScore: 68 };
+          if (r.includes('pro')) return { name: 'AMD Pro', tier: 'Professional', expectedScore: 78 };
+          
+          // AMD集成显卡
+          if (r.includes('radeon(tm) graphics') || r.includes('radeon graphics')) {
+            return { name: 'AMD Integrated Graphics', tier: 'Integrated', expectedScore: 35 };
+          }
+          return { name: 'AMD GPU', tier: 'Unknown', expectedScore: 60 };
+        }
+        
+        // Intel GPU识别
+        if (r.includes('intel') || v.includes('intel')) {
+          if (r.includes('arc')) {
+            const match = r.match(/arc\s*[a-z]*(\d+)/i);
+            if (match) {
+              const model = parseInt(match[1]);
+              if (model >= 700) return { name: `Intel Arc A${model}`, tier: 'Mid-Range', expectedScore: 75 };
+              return { name: `Intel Arc A${model}`, tier: 'Entry-Level', expectedScore: 65 };
+            }
+          }
+          if (r.includes('iris xe')) {
+            return { name: 'Intel Iris Xe', tier: 'Integrated', expectedScore: 45 };
+          }
+          if (r.includes('uhd') || r.includes('hd graphics')) {
+            const match = r.match(/(\d+)/);
+            if (match) {
+              const model = parseInt(match[0]);
+              if (model >= 700) return { name: `Intel UHD ${model}`, tier: 'Integrated', expectedScore: 38 };
+            }
+            return { name: 'Intel UHD Graphics', tier: 'Integrated', expectedScore: 30 };
+          }
+          return { name: 'Intel Integrated', tier: 'Integrated', expectedScore: 32 };
+        }
+        
+        return { name: 'Unknown GPU', tier: 'Unknown', expectedScore: 50 };
+      }
+
+      // VTK性能基准测试(更严格的评分)
+      async function runVTKBenchmark(gl, gpuInfo) {
+        return new Promise((resolve) => {
+          const config = VTK_BENCHMARK_CONFIG;
+          const results = {
+            fps: 0,
+            avgFrameTime: 0,
+            minFrameTime: Infinity,
+            maxFrameTime: 0,
+            frames: 0,
+            drawCalls: 0,
+            pixelFillRate: 0,
+            vertexThroughput: 0
+          };
+
+          // 创建VTK复杂场景程序
+          const program = createVTKComplexSceneProgram(gl);
+          gl.useProgram(program);
+
+          // 设置大量顶点数据
+          const vertexCount = config.triangleCount * 3;
+          const vertices = generateComplexMesh(vertexCount);
+          const normals = generateNormals(vertexCount);
+          
+          const vertexBuffer = gl.createBuffer();
+          gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+          gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+          
+          const normalBuffer = gl.createBuffer();
+          gl.bindBuffer(gl.ARRAY_BUFFER, normalBuffer);
+          gl.bufferData(gl.ARRAY_BUFFER, normals, gl.STATIC_DRAW);
+
+          const positionLoc = gl.getAttribLocation(program, "position");
+          const normalLoc = gl.getAttribLocation(program, "normal");
+          
+          gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+          gl.enableVertexAttribArray(positionLoc);
+          gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 0, 0);
+          
+          gl.bindBuffer(gl.ARRAY_BUFFER, normalBuffer);
+          gl.enableVertexAttribArray(normalLoc);
+          gl.vertexAttribPointer(normalLoc, 3, gl.FLOAT, false, 0, 0);
+
+          // 创建纹理增加负载
+          const texture = createComplexTexture(gl, config.textureSize);
+          gl.activeTexture(gl.TEXTURE0);
+          gl.bindTexture(gl.TEXTURE_2D, texture);
+          gl.uniform1i(gl.getUniformLocation(program, "uTexture"), 0);
+
+          // 启用深度测试和混合
+          gl.enable(gl.DEPTH_TEST);
+          gl.depthFunc(gl.LEQUAL);
+          gl.enable(gl.BLEND);
+          gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
+          let frameCount = 0;
+          let startTime = 0;
+          let lastFrameTime = 0;
+          let isWarmup = true;
+          const frameTimes = [];
+          let totalPixels = 0;
+          let totalVertices = 0;
+
+          function benchmarkLoop(timestamp) {
+            if (frameCount === 0) {
+              startTime = timestamp;
+              lastFrameTime = timestamp;
+            }
+
+            const frameTime = timestamp - lastFrameTime;
+            lastFrameTime = timestamp;
+
+            if (!isWarmup && frameTime > 0) {
+              frameTimes.push(frameTime);
+              results.minFrameTime = Math.min(results.minFrameTime, frameTime);
+              results.maxFrameTime = Math.max(results.maxFrameTime, frameTime);
+            }
+
+            const time = (timestamp - startTime) * 0.001;
+            
+            // 更新复杂的uniforms
+            gl.uniform1f(gl.getUniformLocation(program, "time"), time);
+            gl.uniform1f(gl.getUniformLocation(program, "complexity"), config.complexShaderOps);
+            
+            // 多个动态光源
+            for (let i = 0; i < config.lightCount; i++) {
+              const angle = time * 0.5 + (i * Math.PI * 2 / config.lightCount);
+              gl.uniform3fv(gl.getUniformLocation(program, `lights[${i}]`), 
+                [Math.sin(angle) * 3, 2 + Math.sin(time * 0.3) * 1, Math.cos(angle) * 3]);
+            }
+
+            // 清除缓冲
+            gl.clearColor(0.05, 0.05, 0.1, 1);
+            gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+            
+            // 多次绘制调用模拟复杂VTK场景
+            const drawCallsPerFrame = 8;  // 增加绘制调用次数
+            const verticesPerDraw = Math.floor(vertexCount / 2);  // 每次绘制更多顶点
+            
+            for (let i = 0; i < drawCallsPerFrame; i++) {
+              gl.uniform1f(gl.getUniformLocation(program, "objectOffset"), i * 0.25);
+              gl.uniform1f(gl.getUniformLocation(program, "objectRotation"), time * 0.3 + i * 0.5);
+              gl.drawArrays(gl.TRIANGLES, 0, verticesPerDraw);
+              results.drawCalls++;
+              
+              if (!isWarmup) {
+                totalVertices += verticesPerDraw;
+                totalPixels += config.canvasSize * config.canvasSize;
+              }
+            }
+
+            frameCount++;
+
+            // 预热阶段
+            if (isWarmup && frameCount >= config.warmupFrames) {
+              isWarmup = false;
+              frameCount = 0;
+              startTime = timestamp;
+              frameTimes.length = 0;
+              totalPixels = 0;
+              totalVertices = 0;
+            }
+
+            const elapsed = timestamp - startTime;
+            if (!isWarmup && elapsed < config.testDuration) {
+              requestAnimationFrame(benchmarkLoop);
+            } else if (!isWarmup) {
+              // 计算详细结果
+              results.frames = frameTimes.length;
+              results.fps = (results.frames / (elapsed / 1000));
+              results.avgFrameTime = frameTimes.reduce((a, b) => a + b, 0) / frameTimes.length;
+              
+              // 计算吞吐量
+              results.pixelFillRate = (totalPixels / (elapsed / 1000)) / 1000000; // M pixels/s
+              results.vertexThroughput = (totalVertices / (elapsed / 1000)) / 1000000; // M vertices/s
+
+              // 更严格的综合评分计算
+              const fpsScore = Math.min(100, (results.fps / 60) * 100);
+              
+              // 帧时间稳定性(波动越大扣分越多)
+              const frameTimeVariance = ((results.maxFrameTime - results.minFrameTime) / results.avgFrameTime);
+              const stabilityScore = Math.max(0, 100 - (frameTimeVariance * 30));
+              
+              // 绘制调用效率
+              const expectedDrawCalls = (config.testDuration / 16.67) * 8;
+              const drawCallScore = Math.min(100, (results.drawCalls / expectedDrawCalls) * 100);
+              
+              // 像素填充率得分(基于GPU类型调整)
+              const expectedPixelFillRate = gpuInfo.tier === 'High-End' ? 5000 : 
+                                           gpuInfo.tier === 'Mid-Range' ? 2000 : 
+                                           gpuInfo.tier === 'Integrated' ? 500 : 1000;
+              const pixelScore = Math.min(100, (results.pixelFillRate / expectedPixelFillRate) * 100);
+              
+              // 顶点吞吐量得分
+              const expectedVertexThroughput = gpuInfo.tier === 'High-End' ? 1000 : 
+                                               gpuInfo.tier === 'Mid-Range' ? 500 : 
+                                               gpuInfo.tier === 'Integrated' ? 100 : 300;
+              const vertexScore = Math.min(100, (results.vertexThroughput / expectedVertexThroughput) * 100);
+              
+              // 综合得分(权重分配)
+              let finalScore = (
+                fpsScore * 0.40 +           // FPS权重40%
+                stabilityScore * 0.25 +     // 稳定性权重25%
+                drawCallScore * 0.15 +      // 绘制效率15%
+                pixelScore * 0.10 +         // 像素填充10%
+                vertexScore * 0.10          // 顶点吞吐10%
+              );
+              
+              // 集成显卡惩罚系数
+              if (gpuInfo.tier === 'Integrated') {
+                finalScore = finalScore * 0.7;  // 集成显卡得分打7折
+              }
+              
+              // 如果帧率过低,进一步降低得分
+              if (results.fps < 30) {
+                finalScore = finalScore * (results.fps / 30);
+              }
+
+              // 确定性能等级
+              let tier = 'poor';
+              let tierInfo = config.tiers.poor;
+              
+              if (results.fps >= config.tiers.excellent.minFPS && finalScore >= config.tiers.excellent.minScore) {
+                tier = 'excellent';
+                tierInfo = config.tiers.excellent;
+              } else if (results.fps >= config.tiers.good.minFPS && finalScore >= config.tiers.good.minScore) {
+                tier = 'good';
+                tierInfo = config.tiers.good;
+              } else if (results.fps >= config.tiers.acceptable.minFPS && finalScore >= config.tiers.acceptable.minScore) {
+                tier = 'acceptable';
+                tierInfo = config.tiers.acceptable;
+              }
+
+              const passed = finalScore >= config.tiers.acceptable.minScore;
+
+              // 生成详细报告
+              const scoreBreakdown = `
+                <div style="margin-top: 8px; font-size: 0.9em; color: #666;">
+                  <strong>得分明细:</strong><br>
+                  • FPS得分: ${fpsScore.toFixed(1)} (权重40%)<br>
+                  • 稳定性: ${stabilityScore.toFixed(1)} (权重25%)<br>
+                  • 绘制效率: ${drawCallScore.toFixed(1)} (权重15%)<br>
+                  • 像素填充: ${pixelScore.toFixed(1)} (权重10%)<br>
+                  • 顶点吞吐: ${vertexScore.toFixed(1)} (权重10%)
+                  ${gpuInfo.tier === 'Integrated' ? '<br>• 集成显卡惩罚: -30%' : ''}
+                </div>
+              `;
+
+              const details = `
+                <div class="benchmark-details">
+                  <div class="tier-info ${tierInfo.color}">
+                    <strong>性能评级: ${tier.toUpperCase()}</strong> (得分: ${finalScore.toFixed(1)}/100)<br>
+                    ${tierInfo.description}
+                  </div>
+                  ${scoreBreakdown}
+                  <p><strong>平均FPS:</strong> ${results.fps.toFixed(1)} 帧/秒 ${results.fps >= 60 ? '🚀' : results.fps >= 30 ? '✓' : '⚠'}</p>
+                  <p><strong>帧时间:</strong> ${results.avgFrameTime.toFixed(2)}ms (范围: ${results.minFrameTime.toFixed(2)} - ${results.maxFrameTime.toFixed(2)}ms)</p>
+                  <p><strong>帧时间波动:</strong> ${frameTimeVariance.toFixed(2)}x ${frameTimeVariance < 0.5 ? '(稳定✓)' : frameTimeVariance < 1 ? '(一般)' : '(不稳定⚠)'}</p>
+                  <p><strong>测试帧数:</strong> ${results.frames} 帧 (${config.testDuration/1000}秒测试)</p>
+                  <p><strong>绘制调用:</strong> ${results.drawCalls} 次</p>
+                  <p><strong>像素填充率:</strong> ${results.pixelFillRate.toFixed(1)} M pixels/s</p>
+                  <p><strong>顶点吞吐量:</strong> ${results.vertexThroughput.toFixed(1)} M vertices/s</p>
+                  <p><strong>GPU信息:</strong> ${gpuInfo.name} (${gpuInfo.tier})</p>
+                  <p><strong>预期得分:</strong> ${gpuInfo.expectedScore} ${Math.abs(finalScore - gpuInfo.expectedScore) > 15 ? '⚠ 实际表现异常' : '✓ 符合预期'}</p>
+                  ${Math.abs(finalScore - gpuInfo.expectedScore) > 15 ? 
+                    '<p style="color: #d00; margin-top: 8px;"><strong>⚠ 性能异常警告:</strong><br>' +
+                    (finalScore < gpuInfo.expectedScore ? 
+                      '实际性能低于GPU预期,可能原因:<br>• 显卡驱动版本过旧<br>• 浏览器硬件加速未启用<br>• 电源管理限制GPU性能<br>• 后台程序占用GPU资源' :
+                      '实际性能高于预期,可能是GPU识别不准确') +
+                    '</p>' : ''}
+                </div>
+              `;
+
+              resolve({
+                passed: passed,
+                score: finalScore,
+                tier: tier,
+                details: details
+              });
+            } else {
+              requestAnimationFrame(benchmarkLoop);
+            }
+          }
+
+          requestAnimationFrame(benchmarkLoop);
+        });
+      }
+
+      // 生成复杂网格
+      function generateComplexMesh(vertexCount) {
+        const vertices = new Float32Array(vertexCount * 3);
+        for (let i = 0; i < vertexCount; i++) {
+          const angle = (i / vertexCount) * Math.PI * 2;
+          const radius = 0.5 + Math.random() * 0.3;
+          vertices[i * 3] = Math.cos(angle) * radius;
+          vertices[i * 3 + 1] = Math.sin(angle) * radius;
+          vertices[i * 3 + 2] = (Math.random() - 0.5) * 0.5;
+        }
+        return vertices;
+      }
+
+      // 生成法线数据
+      function generateNormals(vertexCount) {
+        const normals = new Float32Array(vertexCount * 3);
+        for (let i = 0; i < vertexCount; i++) {
+          const angle = (i / vertexCount) * Math.PI * 2;
+          normals[i * 3] = Math.cos(angle);
+          normals[i * 3 + 1] = Math.sin(angle);
+          normals[i * 3 + 2] = Math.sin(angle * 3) * 0.3;
+        }
+        return normals;
+      }
+
+      // 创建复杂纹理
+      function createComplexTexture(gl, size) {
+        const texture = gl.createTexture();
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        
+        const data = new Uint8Array(size * size * 4);
+        for (let i = 0; i < size * size; i++) {
+          const x = i % size;
+          const y = Math.floor(i / size);
+          data[i * 4 + 0] = ((x ^ y) * 2) % 255;
+          data[i * 4 + 1] = ((x + y) * 3) % 255;
+          data[i * 4 + 2] = ((x * y) / 10) % 255;
+          data[i * 4 + 3] = 255;
+        }
+        
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, size, size, 0, gl.RGBA, gl.UNSIGNED_BYTE, data);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+        gl.generateMipmap(gl.TEXTURE_2D);
+        
+        return texture;
+      }
+
+      // 创建VTK复杂场景着色器
+      function createVTKComplexSceneProgram(gl) {
+        const vs = `#version 300 es
+          in vec3 position;
+          in vec3 normal;
+          uniform float time;
+          uniform float objectOffset;
+          uniform float objectRotation;
+          out vec3 vNormal;
+          out vec3 vPosition;
+          out vec2 vTexCoord;
+          
+          mat3 rotationMatrix(float angle) {
+            float s = sin(angle);
+            float c = cos(angle);
+            return mat3(
+              c, 0.0, s,
+              0.0, 1.0, 0.0,
+              -s, 0.0, c
+            );
+          }
+          
+          void main() {
+            mat3 rot = rotationMatrix(objectRotation);
+            vec3 rotated = rot * position;
+            vec3 offset = vec3(objectOffset * sin(time * 0.3), 0.0, 0.0);
+            vec3 finalPos = rotated * 0.6 + offset;
+            
+            vPosition = finalPos;
+            vNormal = normalize(rot * normal);
+            vTexCoord = (position.xy + 1.0) * 0.5;
+            gl_Position = vec4(finalPos, 1.0);
+          }`;
+
+        const fs = `#version 300 es
+          precision highp float;
+          uniform float time;
+          uniform float complexity;
+          uniform vec3 lights[4];
+          uniform sampler2D uTexture;
+          
+          in vec3 vNormal;
+          in vec3 vPosition;
+          in vec2 vTexCoord;
+          out vec4 fragColor;
+          
+          // 复杂的光照计算
+          vec3 calculateLighting(vec3 normal, vec3 position, vec3 lightPos) {
+            vec3 lightDir = normalize(lightPos - position);
+            float diff = max(dot(normal, lightDir), 0.0);
+            
+            vec3 viewDir = normalize(-position);
+            vec3 halfDir = normalize(lightDir + viewDir);
+            float spec = pow(max(dot(normal, halfDir), 0.0), 64.0);
+            
+            float distance = length(lightPos - position);
+            float attenuation = 1.0 / (1.0 + 0.5 * distance + 0.3 * distance * distance);
+            
+            return (diff + spec * 0.5) * attenuation;
+          }
+          
+          // 增加着色器复杂度的函数
+          float complexCalculation(vec2 uv, float t) {
+            float result = 0.0;
+            for (int i = 0; i < int(complexity); i++) {
+              float fi = float(i);
+              result += sin(uv.x * fi + t) * cos(uv.y * fi + t) * 0.1;
+            }
+            return result;
+          }
+          
+          void main() {
+            vec3 normal = normalize(vNormal);
+            
+            // 多光源累加
+            vec3 totalLight = vec3(0.0);
+            for (int i = 0; i < 4; i++) {
+              totalLight += calculateLighting(normal, vPosition, lights[i]);
+            }
+            
+            // 纹理采样
+            vec4 texColor = texture(uTexture, vTexCoord);
+            
+            // 复杂计算增加GPU负载
+            float complexity_factor = complexCalculation(vTexCoord, time);
+            
+            // 基础颜色
+            vec3 baseColor = vec3(0.2, 0.4, 0.7) + texColor.rgb * 0.3;
+            
+            // 环境光
+            vec3 ambient = baseColor * 0.15;
+            
+            // 最终颜色
+            vec3 finalColor = ambient + baseColor * totalLight * 0.6 + vec3(complexity_factor * 0.1);
+            
+            // 添加边缘光
+            float rim = pow(1.0 - max(dot(normal, normalize(-vPosition)), 0.0), 3.0);
+            finalColor += vec3(rim * 0.3);
+            
+            fragColor = vec4(finalColor, 1.0);
+          }`;
+
+        return compileProgram(gl, vs, fs);
+      }
+
+      // 渲染简单场景保持显示
+      function renderSimpleScene(gl) {
+        const program = createSimpleProgram(gl);
+        gl.useProgram(program);
+
+        const vertices = new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]);
+        const buffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+        gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+
+        const positionLoc = gl.getAttribLocation(program, "position");
+        gl.enableVertexAttribArray(positionLoc);
+        gl.vertexAttribPointer(positionLoc, 2, gl.FLOAT, false, 0, 0);
+
+        gl.clearColor(0.9, 0.9, 0.9, 1);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      }
+
+      // 渲染彩色场景作为最终显示
+      function renderColorfulScene(gl) {
+        const program = createColorfulProgram(gl);
+        gl.useProgram(program);
+
+        const vertices = new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]);
+        const buffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+        gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+
+        const positionLoc = gl.getAttribLocation(program, "position");
+        gl.enableVertexAttribArray(positionLoc);
+        gl.vertexAttribPointer(positionLoc, 2, gl.FLOAT, false, 0, 0);
+
+        const timeLoc = gl.getUniformLocation(program, "time");
+        gl.uniform1f(timeLoc, performance.now() * 0.001);
+
+        gl.clearColor(0, 0, 0, 1);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      }
+
+      function checkBrowserVersion() {
+        const agent = navigator.userAgent;
+        if (!/Chrome\//.test(agent) && !/Edg\//.test(agent)) {
+          return false;
+        }
+        if (
+          (agent.match(/Chrome\/(\d+)/) &&
+            parseInt(agent.match(/Chrome\/(\d+)/)[1]) <= 109) ||
+          (agent.match(/Edg\/(\d+)/) &&
+            parseInt(agent.match(/Edg\/(\d+)/)[1]) <= 109)
+        ) {
+          return false;
+        }
+        return true;
+      }
+
+      // 严格的渲染器检测
+      function checkRenderer(renderer) {
+        const softwareRenderers = [
+          "SwiftShader",
+          "Google SwiftShader",
+          "llvmpipe",
+          "softpipe",
+          "WARP",
+          "Microsoft Basic Render Driver",
+          "SVGA3D",
+          "VirtualBox",
+          "VMware",
+        ];
+
+        if (!renderer || renderer === "未知") return false;
+        return !softwareRenderers.some((name) => renderer.includes(name));
+      }
+
+      // 高性能特性检测
+      function checkHighPerfFeatures(gl) {
+        const highPerfExtensions = [
+          "EXT_color_buffer_float",
+          "OES_texture_float_linear",
+          "EXT_texture_filter_anisotropic",
+          "WEBGL_draw_buffers",
+        ];
+        return (
+          highPerfExtensions.filter((ext) => gl.getExtension(ext)).length >= 2
+        );
+      }
+
+      // 创建简单程序
+      function createSimpleProgram(gl) {
+        const vs = `#version 300 es
+          in vec2 position;
+          void main() { gl_Position = vec4(position, 0, 1); }`;
+
+        const fs = `#version 300 es
+          precision highp float;
+          out vec4 fragColor;
+          void main() { fragColor = vec4(0.8, 0.8, 0.8, 1.0); }`;
+
+        return compileProgram(gl, vs, fs);
+      }
+
+      // 创建彩色程序
+      function createColorfulProgram(gl) {
+        const vs = `#version 300 es
+          in vec2 position;
+          void main() { gl_Position = vec4(position, 0, 1); }`;
+
+        const fs = `#version 300 es
+          precision highp float;
+          uniform float time;
+          out vec4 fragColor;
+          void main() {
+            vec2 uv = gl_FragCoord.xy / vec2(512.0);
+            fragColor = vec4(
+              0.5 + 0.5 * sin(time + uv.x * 5.0),
+              0.5 + 0.5 * cos(time + uv.y * 5.0),
+              0.5 + 0.5 * sin(time * 1.5 + (uv.x + uv.y) * 2.0),
+              1.0
+            );
+          }`;
+
+        return compileProgram(gl, vs, fs);
+      }
+
+      // 编译着色器程序
+      function compileProgram(gl, vsSource, fsSource) {
+        const vs = gl.createShader(gl.VERTEX_SHADER);
+        gl.shaderSource(vs, vsSource);
+        gl.compileShader(vs);
+
+        const fs = gl.createShader(gl.FRAGMENT_SHADER);
+        gl.shaderSource(fs, fsSource);
+        gl.compileShader(fs);
+
+        const program = gl.createProgram();
+        gl.attachShader(program, vs);
+        gl.attachShader(program, fs);
+        gl.linkProgram(program);
+
+        return program;
+      }
+
+      // 启动检测
+      runReliableDetection();
+    </script>
+  </body>
+</html>
