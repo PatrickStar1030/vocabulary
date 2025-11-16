@@ -3,7 +3,8 @@
 2.It can be identified that each factor has exerted a differing degree of influence.
 First and foremost, item1 is the most popular and occupies the largest share with number1.
 3.Following are item2 and item3, with proportions of number2 and number3, respectively.
-However, the preferences for item4 (and item5) are relatively less, accounting for number4 (and number5), respectively.
+However, the preferences（此处若是只有一个要用单数，后面的谓语动词要用is） 
+for item4 (and item5) are relatively less, accounting for number4 (and number5), respectively.
 [注：如果只有3-4个数据项，删除item4和item5相关句子]
 
 首选 dynamic
@@ -19,54 +20,46 @@ the same period, descending/ascending from number 5 to 6.]
 | 程度副词：slowly, rapidly, sharply, gently, steadily]
 
 中段
-1.According to the statistical information available, the deep-rooted drivers of 主题词 can be dissected as follows.
-2.Firstly, 主题词 is a microcosm of the larger simultaneous improvement of citizens' life quality and happiness and 
-country's GDP.
-3.Secondly, given the focus on humanitarian concepts by developed countries, 主题词 is considered a more prosperous
-and progressive civilization appropriate to current era.
-4.Thirdly, social media platforms and the era of the internet expose the public to 主题词 at unimaginable rates,
-and the instantaneous dissemination and discussion have put it in the mainstream.
-5.Fourthly, the increasing number of individuals pursuing high-quality life has provided substantial impetus to 主题词.
-6.Ultimately, the diverse and complementary policies introduced by the government have laid a solid foundation for 
-the development of 主题词.
+
+1.According to the statistical information available(可用的，现有的), 
+the deep-rooted（深层次的） drivers（驱动力） of 主题词 can be dissected（剖析） as follows.  
+根据现有的统计信息，主题词的深层次驱动力可以如下剖析。
+
+2.Firstly, 主题词 is a microcosm（缩影） of the larger simultaneous（同时的） improvement 
+of citizens'（这里可以根据题干替换为主体，比如college students`） life quality and happiness and country's GDP.  
+首先，主题词是公民生活质量与幸福感以及国家GDP同步提升的一个缩影。
+
+3.Secondly, given the focus on humanitarian（人文的） concepts by developed countries（此处也可以替换为切合主体的机构，如educations）, 
+主题词 is considered a more prosperous（繁荣） and progressive civilization appropriate（契合） to current era.  
+其次，鉴于发达国家对人文理念的关注，主题词被认为是契合当下时代的更为繁荣和进步的文明体现。
+
+4.Thirdly, social media platforms and the era of the internet expose the public(the public可以替换为主体群体students) 
+to 主题词 at unimaginable rates, 
+and the instantaneous（即时的） dissemination（传播） and discussion have put it in the mainstream.  
+第三，社交媒体平台及互联网时代使公众以难以想象的速度接触到主题词，信息的即时传播和讨论使其成为主流。
+
+5.Fourthly, the increasing number of individuals（college students） pursuing high-quality life 
+has provided substantial impetus（推动力） to 主题词.  
+第四，越来越多追求高质量生活的人为主题词的发展提供了强大的推动力。
+
+6.Ultimately, the diverse and complementary（互补） policies introduced by the government
+（educational authorities/educational institutions/the education department） have laid a solid foundation
+for the development of 主题词.  
+最后，政府出台的多样化、互补性的政策为主题词的发展奠定了坚实的基础。
 
 尾段
-1.It can be concluded from the above analysis that 主题词 embodies the progress that has occurred in the citizens' lives.
-2.It is widely recognized that Chinese nation has quite a powerful cohesion, therefore, the government should be 
-far-sighted in formulating laws and regulations on 主题词, which would further improve the living conditions of citizens.
-3.Moreover, individuals should emphasize learning and innovation to better contribute to the development of 主题词 and 
-avoid biased opinions.
+1. It can be concluded from the above analysis that 主题词 embodies the progress that has occurred in the 
+citizens' lives (college students' lives).
+可以从以上分析得出结论，主题词体现了公民生活（或大学生生活）所发生的进步。
+
+2. It is widely recognized that Chinese nation has quite a powerful cohesion, 
+（It is widely recognized that college students have a strong desire for freedom/a strong pursuit of freedom）
+therefore, the government（educational institude） 
+should be far-sighted in formulating laws(public) and regulations on 主题词, which would further improve the living conditions of citizens.
+众所周知，中华民族具有强大的凝聚力，因此，政府在制订关于主题词的法律法规时应具备前瞻性，这将进一步改善公民的生活状况。
+
+3. Moreover, individuals should emphasize learning and innovation to better contribute to the development 
+of 主题词 and avoid biased opinions.
+此外，个人应重视学习与创新，从而更好地促进主题词的发展，并避免产生偏见。
 4.[补充：预测未来趋势] Given the current trend, it is reasonable to predict that 主题词 will continue to develop and 
 play an increasingly important role in our daily lives in the foreseeable future.
-
-========== 【补充句型库】 ==========
-
-【首段与中段过渡句】
-Several factors contribute to this phenomenon. / 
-What accounts for this trend? / 
-The reasons behind this trend are multifaceted.
-
-【数据对比句型】
-- item1 is twice/three times as much as item2
-- item1 accounts for X% more than item2
-- item1 ranks first, followed by item2 and item3
-- There is a significant difference between item1 and item2
-- item1 and item2 are almost equal in proportion
-
-【趋势描述补充】
-- remained stable/constant at number
-- fluctuated between number1 and number2
-- reached a peak of number in time
-- hit a record low of number in time
-- experienced a dramatic increase/decrease
-
-【中段原因分析可选句型】
-- Economic factors: The rapid economic development has provided financial support for 主题词.
-- Technological factors: The advancement of technology has made 主题词 more accessible and convenient.
-- Social factors: The changing social values and lifestyles have contributed to the rise of 主题词.
-- Policy factors: Government policies and regulations have played a crucial role in promoting 主题词.
-
-【尾段补充句型】
-- Looking ahead, 主题词 is expected to...
-- In the long run, 主题词 will undoubtedly...
-- It is imperative that both the government and individuals work together to...

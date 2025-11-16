@@ -1,0 +1,146 @@
+# 英语二作文主题词预测汇总
+
+> 材料来源：考研斯基，参考张剑、王江涛、石雷鹏、潘赟等老师
+
+---
+
+## 【张剑 (Zhang Jian)】
+
+### 1. "倍速生活"/快节奏生活
+- **`accelerated living`** / **`the rapid pace of life`**
+
+### 2. 毕业生就业城市选择
+- **`graduates' choice of city for employment`**
+
+### 3. 中国品牌和海外品牌新能源汽车市场占有率走势
+- **`the market share trends of new energy vehicles (NEVs) between Chinese brands and foreign brands`**
+
+### 4. 制约公民利用科普场馆设施的因素
+- **`factors that discourage citizens from visiting science education venues`**
+
+### 5. 中国老年抚养比
+- **`the old-age dependency ratio in China`**
+
+---
+
+## 【王江涛 (Wang Jiangtao)】
+
+### 1. 高铁
+- **`high-speed railway`**
+
+### 2. 新能源汽车
+- **`New Energy Vehicles (NEVs)`**
+
+### 3. 外卖
+- **`takeaway`**
+
+### 4. 扶贫成就
+- **`achievements in poverty alleviation`**
+
+### 5. 直播
+- **`live broadcasting`**
+
+### 6. 旅游(旅游业)
+- **`travel`** / **`tourism`** / **`tourist industry`**
+
+### 7. 健康
+- **`health`** / **`fitness`**
+
+### 8. 传统文化
+- **`traditional culture`**
+
+### 9. 考研
+- **`take the postgraduate entrance exams`**
+- **`take the National Postgraduate Entrance Examination (NPEE)`**
+- **`pursue a master's degree`**
+
+### 10. 人工智能
+- **`artificial intelligence`** / **`AI`**
+
+---
+
+## 【石雷鹏 (Shi Leipeng)】
+
+### 1. 燃油车与新能源汽车国内销量
+- **`the domestic sales of gasoline-powered and new-energy vehicles`**
+
+### 2. 居民日常出行选择
+- **`residents' daily transportation choices`**
+
+### 3. 年轻人就餐选择
+- **`youngsters' dining choices`**
+
+### 4. 中国人平均寿命/人口老龄化
+- **`the average lifespan of Chinese people`**
+- **`population aging`**
+
+### 5. AI产品各年龄段用户比例
+- **`the proportions of AI product users in different age groups`**
+
+### 6. 图书借阅情况
+- **`the circulation of books in the library`**
+
+### 7. 看传统戏曲的年轻人/中国文化
+- **`young people who watch traditional Chinese opera`**
+- **`Chinese culture`**
+
+### 8. 纸质书及电子书使用比例
+- **`the proportion/percentage of paper book and e-book usage`**
+
+### 9. 科技改变习惯
+- **`science and technology has changed people's habits`**
+
+### 10. 奖励式教育
+- **`incentive-based parenting`**
+
+---
+
+## 【潘赟 (Pan Yun)】
+
+### 1. 创新
+- **`creation and innovation`**
+
+### 2. 中华传统美德
+- **`traditional Chinese virtues`**
+
+### 3. 沉迷网络
+- **`web-addiction`**
+
+### 4. 虚拟生活
+- **`virtual life`**
+
+### 5. 电子商务
+- **`e-commerce`**
+
+### 6. 庆祝传统节日
+- **`celebrate traditional festivals`**
+
+### 7. 就业市场
+- **`job market`**
+
+### 8. 信息时代
+- **`information era`**
+
+### 9. 节能 (节约能源)
+- **`save energy`**
+
+### 10. 减排 (减少温室气体排放)
+- **`reduce the emission of greenhouse gases`**
+
+### 11. 高等教育
+- **`higher education`**
+
+### 12. 深造
+- **`further study`**
+
+### 13. 名人代言
+- **`celebrity endorsement`**
+
+---
+
+## 使用说明
+
+- 所有英文表达均用 **粗体** 和 `代码块` 高亮显示
+- 多个表达用 `/` 分隔，表示可以替换使用
+- 括号内为补充说明或可替换词汇
+
