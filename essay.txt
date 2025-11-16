@@ -1,0 +1,72 @@
+首选 static
+1.The data in the pie/bar/line/table chart gives us an idea of how 主题词 has changed as society progresses.
+2.It can be identified that each factor has exerted a differing degree of influence.
+First and foremost, item1 is the most popular and occupies the largest share with number1.
+3.Following are item2 and item3, with proportions of number2 and number3, respectively.
+However, the preferences for item4 (and item5) are relatively less, accounting for number4 (and number5), respectively.
+[注：如果只有3-4个数据项，删除item4和item5相关句子]
+
+首选 dynamic
+1.The data in the pie/bar/line chart gives us an idea of how 主题词 has changed as society progresses.
+2.It is pronounced that item1 and item2 go through similar/opposite trends. The data of the former(第一条) climbed/declined 
+rapidly/sharply from number1 to number2 over the period between time1 and time2.
+3.In comparison, the data of the latter（第二条） rose/declined relatively gently from number3 to number4.
+[补充：如果还有item3，平稳数据，可加：Meanwhile, item3 remained stable/fluctuated around number5 during the same period.]
+[补充：如果还有item3，动态数据，可加：As for the item3, it has undergone a relatively slow/slight decline/growth during 
+the same period, descending/ascending from number 5 to 6.]
+[补充说明1：如果选择"opposite trends"（一条上升一条下降），需要根据实际情况明确描述item1和item2分别是上升还是下降]
+[补充说明2：上升动词：increased, climbed, rose, grew | 下降动词：decreased, declined, dropped, fell 
+| 程度副词：slowly, rapidly, sharply, gently, steadily]
+
+中段
+1.According to the statistical information available, the deep-rooted drivers of 主题词 can be dissected as follows.
+2.Firstly, 主题词 is a microcosm of the larger simultaneous improvement of citizens' life quality and happiness and 
+country's GDP.
+3.Secondly, given the focus on humanitarian concepts by developed countries, 主题词 is considered a more prosperous
+and progressive civilization appropriate to current era.
+4.Thirdly, social media platforms and the era of the internet expose the public to 主题词 at unimaginable rates,
+and the instantaneous dissemination and discussion have put it in the mainstream.
+5.Fourthly, the increasing number of individuals pursuing high-quality life has provided substantial impetus to 主题词.
+6.Ultimately, the diverse and complementary policies introduced by the government have laid a solid foundation for 
+the development of 主题词.
+
+尾段
+1.It can be concluded from the above analysis that 主题词 embodies the progress that has occurred in the citizens' lives.
+2.It is widely recognized that Chinese nation has quite a powerful cohesion, therefore, the government should be 
+far-sighted in formulating laws and regulations on 主题词, which would further improve the living conditions of citizens.
+3.Moreover, individuals should emphasize learning and innovation to better contribute to the development of 主题词 and 
+avoid biased opinions.
+4.[补充：预测未来趋势] Given the current trend, it is reasonable to predict that 主题词 will continue to develop and 
+play an increasingly important role in our daily lives in the foreseeable future.
+
+========== 【补充句型库】 ==========
+
+【首段与中段过渡句】
+Several factors contribute to this phenomenon. / 
+What accounts for this trend? / 
+The reasons behind this trend are multifaceted.
+
+【数据对比句型】
+- item1 is twice/three times as much as item2
+- item1 accounts for X% more than item2
+- item1 ranks first, followed by item2 and item3
+- There is a significant difference between item1 and item2
+- item1 and item2 are almost equal in proportion
+
+【趋势描述补充】
+- remained stable/constant at number
+- fluctuated between number1 and number2
+- reached a peak of number in time
+- hit a record low of number in time
+- experienced a dramatic increase/decrease
+
+【中段原因分析可选句型】
+- Economic factors: The rapid economic development has provided financial support for 主题词.
+- Technological factors: The advancement of technology has made 主题词 more accessible and convenient.
+- Social factors: The changing social values and lifestyles have contributed to the rise of 主题词.
+- Policy factors: Government policies and regulations have played a crucial role in promoting 主题词.
+
+【尾段补充句型】
+- Looking ahead, 主题词 is expected to...
+- In the long run, 主题词 will undoubtedly...
+- It is imperative that both the government and individuals work together to...
