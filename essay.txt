@@ -9,8 +9,9 @@ for item4 (and item5) are relatively less, accounting for number4 (and number5),
 
 首选 dynamic
 1.The data in the pie/bar/line chart gives us an idea of how 主题词 has changed as society progresses.
-2.It is pronounced that item1 and item2 go through similar/opposite trends. The data of the former(第一条) climbed/declined 
-rapidly/sharply from number1 to number2 over the period between time1 and time2.
+2.It is pronounced that item1 and item2 go through similar/opposite trends.
+[补充：如果只有一条曲线，如2023真题 health literacy,可以分时间段描述，如：that health literacy during 2016-2021 and 2012-2015 go through ....] 
+The data of the former(第一条) climbed/declined rapidly/sharply from number1 to number2 over the period between time1 and time2.
 3.In comparison, the data of the latter（第二条） rose/declined relatively gently from number3 to number4.
 [补充：如果还有item3，平稳数据，可加：Meanwhile, item3 remained stable/fluctuated around number5 during the same period.]
 [补充：如果还有item3，动态数据，可加：As for the item3, it has undergone a relatively slow/slight decline/growth during 
@@ -55,7 +56,7 @@ citizens' lives (college students' lives).
 2. It is widely recognized that Chinese nation has quite a powerful cohesion, 
 （It is widely recognized that college students have a strong desire for freedom/a strong pursuit of freedom）
 therefore, the government（educational institude） 
-should be far-sighted in formulating laws(public) and regulations on 主题词, which would further improve the living conditions of citizens.
+should be far-sighted in formulating laws(pulicies) and regulations on 主题词, which would further improve the living conditions of citizens.
 众所周知，中华民族具有强大的凝聚力，因此，政府在制订关于主题词的法律法规时应具备前瞻性，这将进一步改善公民的生活状况。
 
 3. Moreover, individuals should emphasize learning and innovation to better contribute to the development 
