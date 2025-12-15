@@ -13,9 +13,10 @@ for item4 (and item5) are relatively less, accounting for number4 (and number5),
 [补充：如果只有一条曲线，如2023真题 health literacy,可以分时间段描述，如：that health literacy during 2016-2021 and 2012-2015 go through ....] 
 The data of the former(第一条) climbed/declined rapidly/sharply from number1 to number2 over the period between time1 and time2.
 3.In comparison, the data of the latter（第二条） rose/declined relatively gently from number3 to number4.
-[补充：如果还有item3，平稳数据，可加：Meanwhile, item3 remained stable/fluctuated around number5 during the same period.]
-[补充：如果还有item3，动态数据，可加：As for the item3, it has undergone a relatively slow/slight decline/growth during 
-the same period, descending/ascending from number 5 to 6.]
+[补充：如果还有item3，平稳数据（几乎不变），可加：Meanwhile, item3 remained relatively stable/almost unchanged, hovering around number5 during the same period.]
+[补充：如果还有item3，平稳上升/下降（几乎没变化，如10.1→10.2），可加：Meanwhile, item3 experienced a slight/minimal increase/decrease from number5 to number6, remaining almost unchanged during the same period.]
+[补充：如果还有item3，动态数据（有明显变化），可加：As for item3, it has undergone a relatively slow/slight decline/growth during 
+the same period, descending/ascending from number5 to number6.]
 [补充说明1：如果选择"opposite trends"（一条上升一条下降），需要根据实际情况明确描述item1和item2分别是上升还是下降]
 [补充说明2：上升动词：increased, climbed, rose, grew | 下降动词：decreased, declined, dropped, fell 
 | 程度副词：slowly, rapidly, sharply, gently, steadily]
