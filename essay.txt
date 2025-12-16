@@ -1,4 +1,4 @@
-首选 static
+首段 static
 1.The data in the pie/bar/line/table chart gives us an idea of how 主题词 has changed as society progresses.
 2.It can be identified that each factor has exerted a differing degree of influence.
 First and foremost, item1 is the most popular and occupies the largest share with number1.
@@ -7,7 +7,7 @@ However, the preferences（此处若是只有一个要用单数，后面的谓�
 for item4 (and item5) are relatively less, accounting for number4 (and number5), respectively.
 [注：如果只有3-4个数据项，删除item4和item5相关句子]
 
-首选 dynamic
+首段 dynamic
 1.The data in the pie/bar/line chart gives us an idea of how 主题词 has changed as society progresses.
 2.It is pronounced that item1 and item2 go through similar/opposite trends.
 [补充：如果只有一条曲线，如2023真题 health literacy,可以分时间段描述，如：that health literacy during 2016-2021 and 2012-2015 go through ....] 
@@ -62,5 +62,3 @@ should be far-sighted in formulating laws(pulicies) and regulations on 主题词
 3. Moreover, individuals should emphasize learning and innovation to better contribute to the development 
 of 主题词 and avoid biased opinions.
 此外，个人应重视学习与创新，从而更好地促进主题词的发展，并避免产生偏见。
-4.[补充：预测未来趋势] Given the current trend, it is reasonable to predict that 主题词 will continue to develop and 
-play an increasingly important role in our daily lives in the foreseeable future.
